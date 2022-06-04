@@ -1,102 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta property="og:title" content="Personal Portfolio">
-    <meta property="og:description" content="My Personal Portfolio">
-    <meta property="og:url" content="{{ url }}">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
-    <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-    <title>Home</title>
+{% block content %}
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">      
+    <style>
+        .project-title {
+          color: black;
+          text-align: center;
+        }
+        hr {
+          border: 10px solid cornflowerblue;
+          border-radius: 5%;
+          margin: 70px;
+          max-width: 50%;
+          margin-left: 25%;
+          margin-right: auto;
+        }
+        .carousel {
+          margin-left: 15%;
+          margin-right: auto;
+          max-width: 70%;
+          padding-top: 20px;
+        }
+    </style>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#">Portfolio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Education/Experience</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Portfolio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
+  <header class="header">
+    <div class="description">
+      <h1>Welcome!</h1>
+      <p>This is our portfolio. Scroll down to learn more about us! MLH Fellowship Summer 2022! Yeah!</p>
+      <button class="btn btn-outline-secondary btn-lg">Learn More</button>
+  </div>
+  </header>
+  <div class="about-cards">
+    <h1>{% block title %}About{% endblock %}</h1>
+    <div class="container">
+      <div class="row">
+        <div class="card col-lg-4 col-md-4 col-sm-12">
+          <div class="card col-lg-12 col-md-12 col-sm-12">
+            <img class="card-img-top" src="https://st2.depositphotos.com/7316806/49894/v/380/depositphotos_498942588-stock-illustration-avatar-man-person-face-icon.jpg?forcejpeg=true" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">Luis</h4>
+              <h6 class="card-subtitle mb-2 text-muted">City, Country</h6>
+              <p class="card-text">This is Luis. This is some example text. This is some example text. This is some example text. This is some example text.</p>
+            </div>
+          </div>
         </div>
-    </nav>
-    <header class="header">
-      <div class="description">
-        <h1>Welcome!</h1>
-        <p>This is our portfolio. Scroll down to learn more about us! MLH Fellowship Summer 2022! Yeah!</p>
-        <button class="btn btn-outline-secondary btn-lg">Learn More</button>
-    </div>
-    </header>
-    <div class="about-cards">
-      <h1>About</h1>
-      <div class="container">
-        <div class="row">
-          <div class="card col-lg-4 col-md-4 col-sm-12">
-            <div class="card col-lg-12 col-md-12 col-sm-12">
-              <img class="card-img-top" src="https://st2.depositphotos.com/7316806/49894/v/380/depositphotos_498942588-stock-illustration-avatar-man-person-face-icon.jpg?forcejpeg=true" alt="Card image">
-              <div class="card-body">
-                <h4 class="card-title">Luis</h4>
-                <p class="card-text">This is Luis. This is some example text. This is some example text. This is some example text. This is some example text.</p>
-              </div>
+        <div class="card col-lg-4 col-md-4 col-sm-12">
+          <div class="card col-lg-12 col-md-12 col-sm-12">
+            <img class="card-img-top" src="https://st2.depositphotos.com/7316806/49894/v/380/depositphotos_498942588-stock-illustration-avatar-man-person-face-icon.jpg?forcejpeg=true" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">Lin</h4>
+              <h5 class="card-subtitle mb-2 text-muted">City, Country</h5>
+              <p class="card-text">This is Lin. This is some example text. This is some example text. This is some example text. This is some example text. </p>
             </div>
           </div>
-          <div class="card col-lg-4 col-md-4 col-sm-12">
-            <div class="card col-lg-12 col-md-12 col-sm-12">
-              <img class="card-img-top" src="https://st2.depositphotos.com/7316806/49894/v/380/depositphotos_498942588-stock-illustration-avatar-man-person-face-icon.jpg?forcejpeg=true" alt="Card image">
-              <div class="card-body">
-                <h4 class="card-title">Lin</h4>
-                <p class="card-text">This is Lin. This is some example text. This is some example text. This is some example text. This is some example text. </p>
-              </div>
-            </div>
-          </div>
-          <div class="card col-lg-4 col-md-4 col-sm-12">
-            <div class="card col-lg-12 col-md-12 col-sm-12">
-              <img class="card-img-top" src="https://st2.depositphotos.com/7316806/49894/v/380/depositphotos_498942588-stock-illustration-avatar-man-person-face-icon.jpg?forcejpeg=true" alt="Card image">
-              <div class="card-body">
-                <h4 class="card-title">Ixchel</h4>
-                <p class="card-text">This is Ixchel. This is some example text. This is some example text. This is some example text. This is some example text. </p>
-              </div>
+        </div>
+        <div class="card col-lg-4 col-md-4 col-sm-12">
+          <div class="card col-lg-12 col-md-12 col-sm-12">
+            <img class="card-img-top" src="https://st2.depositphotos.com/7316806/49894/v/380/depositphotos_498942588-stock-illustration-avatar-man-person-face-icon.jpg?forcejpeg=true" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">Ixchel</h4>
+              <h5 class="card-subtitle mb-2 text-muted">City, Country</h5>
+              <p class="card-text">This is Ixchel. This is some example text. This is some example text. This is some example text. This is some example text. </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <footer class="footer">
-      <div>Created by ...</div>
-      <div>MLH Fellowship Summer 2022</div>
-    </footer>
+  </div>
+  <hr class="divider" />
+  <div class="project-carousel">
+    <h1 class="project-title">Projects</h1>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="https://www.sattvagroup.in/wp-content/uploads/2018/05/Image-Tower.jpg" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Luis's Project</h5>
+            <p>This is Luis's Project. This is some sample text. This is some sample text. This is some sample text. This is some sample text. This is some sample text. This is some sample text.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="https://www.sattvagroup.in/wp-content/uploads/2018/05/Image-Tower.jpg" alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Lin's Project</h5>
+            <p>This is Lin's Project. This is some sample text. This is some sample text. This is some sample text. This is some sample text. This is some sample text. This is some sample text.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="https://www.sattvagroup.in/wp-content/uploads/2018/05/Image-Tower.jpg" alt="Third slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Ixchel's Project</h5>
+            <p>This is Ixchel's Project. This is some sample text. This is some sample text. This is some sample text. This is some sample text. This is some sample text. This is some sample text.</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+{% endblock %}
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- Added JavaScript -->
-    <script src="../static/js/main.js"></script>
 
- </body>
-</html>
