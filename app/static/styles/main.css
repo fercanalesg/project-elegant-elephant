@@ -30,6 +30,12 @@ body {
 }
 .description button:hover {
     background: #478966;
+}
+.description a {
+    text-decoration: none;
+    color: #478966;
+}
+.description a:hover {
     color: #E3C6AD;
 }
 .about-cards {
@@ -206,7 +212,9 @@ hr.divider {
     font-weight: 300;
 }
 .hobbies .hobbies-profile {
-    margin: 80px 100px;
+    margin: 80px 80px;
+    background: #fce9d9;
+    padding: 50px;
 }
 .hobbies .hobbies-profile h2 {
     text-transform: uppercase;
@@ -233,7 +241,7 @@ hr.divider {
     background: #135E46;
 }
 .hobbies .hobbies-profile .card {
-    border: 4px #135E46 solid;
+    border: 3px #135E46 solid;
     border-radius: 5%;
 }
 .hobbies .hobbies-profile .card:hover{
