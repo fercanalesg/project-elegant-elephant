@@ -104,6 +104,7 @@ hr.divider {
     max-width: 70%;
     margin-left: 15%;
     font-weight: 300;
+    text-align: center;
 }
 .prof .jumbotron {
     background-color: #d3f8e1;
@@ -126,6 +127,7 @@ hr.divider {
 .prof .jumbotron h5 {
     padding: 0;
     margin: 0;
+    text-align: left;
 }
 #prof-title {
     margin-top: 100px;
@@ -183,4 +185,60 @@ hr.divider {
     border: 0.5px solid white;
     width: 70%;
     margin-left: 0%;
+}
+.hobbies {
+   margin-bottom: 120px;
+}
+.hobbies .hero {
+    padding: 200px 50px;
+    background: #135E46;
+    color: white;
+    text-align: center;
+}
+.hobbies #page-title {
+    color: #E3C6AD;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+.hobbies .hero h5 {
+    max-width: 60%;
+    margin-left: 20%;
+    font-weight: 300;
+}
+.hobbies .hobbies-profile {
+    margin: 80px 100px;
+}
+.hobbies .hobbies-profile h2 {
+    text-transform: uppercase;
+    color: #135E46;
+    display: inline;
+    padding-left: 10px;
+    padding-right: 30px;
+    font-size: 2.5em;
+}
+.hobbies .hobbies-profile hr {
+    border: 2px #135E46 solid;
+    border-radius: 5%;
+    margin-bottom: 30px;
+}
+.hobbies .hobbies-profile button {
+    background: #478966;
+    padding: 10px;
+    border-radius: 5%;
+    border: none;
+    margin-right: 10px;
+    transform: translateY(-5px);
+}
+.hobbies .hobbies-profile button:hover {
+    background: #135E46;
+}
+.hobbies .hobbies-profile .card {
+    border: 4px #135E46 solid;
+    border-radius: 5%;
+}
+.hobbies .hobbies-profile .card:hover{
+    color:#B67B65;
+}
+.hobbies .hobbies-profile .card img {
+    max-width: 100%;
 }
