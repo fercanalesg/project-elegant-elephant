@@ -17,7 +17,3 @@ def professionInfo():
 @app.route('/hobbies')
 def portfolio():
     return render_template('hobbies.html', title="Hobbies", url=os.getenv("URL"))
-
-@app.route('/contact')
-def contact():
-    return render_template('contact.html', title="Contact", url=os.getenv("URL"))

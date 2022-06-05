@@ -3,36 +3,16 @@
 {% block content %}
   <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">      
-    <style>
-        .project-title {
-          color: black;
-          text-align: center;
-        }
-        hr {
-          border: 10px solid cornflowerblue;
-          border-radius: 5%;
-          margin: 70px;
-          max-width: 50%;
-          margin-left: 25%;
-          margin-right: auto;
-        }
-        .carousel {
-          margin-left: 15%;
-          margin-right: auto;
-          max-width: 70%;
-          padding-top: 20px;
-        }
-    </style>
   </head>
   <header class="header">
     <div class="description">
-      <h1>Welcome!</h1>
-      <p>This is our portfolio. Scroll down to learn more about us! MLH Fellowship Summer 2022! Yeah!</p>
+      <h1 class="text-uppercase font-weight-bold">Welcome!</h1>
+      <p>This the portfolio site from Luis, Lin, and Ixchel. We are glad that you found this page. Scroll down to find out more about us.</p>
       <button class="btn btn-outline-secondary btn-lg">Learn More</button>
-  </div>
+    </div>
   </header>
   <div class="about-cards">
-    <h1>{% block title %}About{% endblock %}</h1>
+    <h1 class="text-uppercase font-weight-bold">{% block title %}About{% endblock %}</h1>
     <div class="container">
       <div class="row">
         <div class="card col-lg-4 col-md-4 col-sm-12">
@@ -40,18 +20,18 @@
             <img class="card-img-top" src="https://st2.depositphotos.com/7316806/49894/v/380/depositphotos_498942588-stock-illustration-avatar-man-person-face-icon.jpg?forcejpeg=true" alt="Card image">
             <div class="card-body">
               <h4 class="card-title">Luis</h4>
-              <h6 class="card-subtitle mb-2 text-muted">City, Country</h6>
+              <h6 class="card-subtitle mb-2">City, Country</h6>
               <p class="card-text">This is Luis. This is some example text. This is some example text. This is some example text. This is some example text.</p>
             </div>
           </div>
         </div>
         <div class="card col-lg-4 col-md-4 col-sm-12">
           <div class="card col-lg-12 col-md-12 col-sm-12">
-            <img class="card-img-top" src="https://st2.depositphotos.com/7316806/49894/v/380/depositphotos_498942588-stock-illustration-avatar-man-person-face-icon.jpg?forcejpeg=true" alt="Card image">
+            <img class="card-img-top" src="../static/img/lin.JPG" alt="Card image">
             <div class="card-body">
               <h4 class="card-title">Lin</h4>
-              <h5 class="card-subtitle mb-2 text-muted">City, Country</h5>
-              <p class="card-text">This is Lin. This is some example text. This is some example text. This is some example text. This is some example text. </p>
+              <h5 class="card-subtitle mb-2">NY, United States</h5>
+              <p class="card-text">I am a rising sophomore at Cornell University, majoring in Computer Science. I am passionate about software engineering and hopes to learn more about the industry through both academic and professional opportunities. Look around this website to know more about me and this team!</p>
             </div>
           </div>
         </div>
@@ -60,7 +40,7 @@
             <img class="card-img-top" src="https://st2.depositphotos.com/7316806/49894/v/380/depositphotos_498942588-stock-illustration-avatar-man-person-face-icon.jpg?forcejpeg=true" alt="Card image">
             <div class="card-body">
               <h4 class="card-title">Ixchel</h4>
-              <h5 class="card-subtitle mb-2 text-muted">City, Country</h5>
+              <h5 class="card-subtitle mb-2">City, Country</h5>
               <p class="card-text">This is Ixchel. This is some example text. This is some example text. This is some example text. This is some example text. </p>
             </div>
           </div>
@@ -70,7 +50,7 @@
   </div>
   <hr class="divider" />
   <div class="project-carousel">
-    <h1 class="project-title">Projects</h1>
+    <h1 class="project-title text-uppercase font-weight-bold">Projects</h1>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -86,10 +66,10 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="https://www.sattvagroup.in/wp-content/uploads/2018/05/Image-Tower.jpg" alt="Second slide">
+          <img class="d-block w-100" src="https://media.istockphoto.com/photos/someone-taking-picture-of-own-plate-with-mobile-phone-picture-id576736730?k=20&m=576736730&s=170667a&w=0&h=itWuTdWyYQInEmYe1pBGzlTEGhAwNY_Nl34du2Q9lJY=" alt="Second slide">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Lin's Project</h5>
-            <p>This is Lin's Project. This is some sample text. This is some sample text. This is some sample text. This is some sample text. This is some sample text. This is some sample text.</p>
+            <h5>Clean Plate (Lin)</h5>
+            <p>This project, done as part of the YHack, utilizes java to create a simple interface for the user to track their food waste level for each day and see statistical summary of their food waste level over time. The purpose of the app is to make more people become aware of the issue of food waste.</p>
           </div>
         </div>
         <div class="carousel-item">
