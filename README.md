@@ -2,6 +2,28 @@
 
 Welcome to the MLH Fellowship! During Week 1, you'll be working with Flask to build a portfolio site. This site will be the foundation for activities we do in future weeks so spend time this week making it your own and reflect your personality!
 
+## Info About Web Portfolio
+Inspiration
+This portfolio project aims to introduce ourselves to the team members and provide us with a platform for other people to know about us better. As college students who are actively seeking for professional opportunities to further develop ourselves and prepare us for the industry, we created this web portfolio so that it is more convenient for people to know about us and to connect with us.
+
+What it does
+It allows you to browse around the web page, through all the different sections and tabs so that you can know our team members better.
+
+How we built it
+We developed our project using Python, jinja templates, HTML, and CSS, also with the help of some frameworks such as Flask and Bootstrap we were able to make our website more interactive and attractive.
+
+Challenges we ran into
+We encountered challenges as none of us are very familiar with flask, so we had to spend some time learning more about employing flask for web applications and setting up the basic structure using new tools like jinja and Bootstrap.
+
+Accomplishments that we're proud of
+We were able to achieve the main goal. We developed an interactive and well-designed website while we learned how to implement new tools and libraries in a web development process.
+
+What we learned
+We learned a lot about utilizing the different technical tools such as Flask, Bootstrap and jinja as we utilized them on building the web pages.
+
+What's next for Portfolio Elegant Elephant
+We hope to add more to the backend of the portfolio in the future and host it on a web server, as it is currently only running on our local machine.
+
 ## Tasks
 
 Once you've got your portfolio downloaded and running using the instructions below, you should attempt to complete the following tasks.
