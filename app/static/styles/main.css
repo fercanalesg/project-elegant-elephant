@@ -192,6 +192,9 @@ hr.divider {
     width: 70%;
     margin-left: 0%;
 }
+.footer .social-media a {
+    text-decoration: none;
+}
 .hobbies {
    margin-bottom: 120px;
 }
