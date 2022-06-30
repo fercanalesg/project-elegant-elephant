@@ -39,10 +39,12 @@
                 method: "POST",
                 body: payload,
             })
-
-            .then(() => {
-            window.location.reload();
-            })
+                .then(res => res.json())
+                .then(data => console.log(data))
+                .then(() => {
+                    window.location.reload();
+                })
+                .catch(err => console.log(err));
         })
     </script>
 
@@ -65,7 +67,7 @@
                     `<div class="post" id="post-${post.id}>
                         <span class="name">${post.name}</span>
                         <span class="email">${post.email}</span>
-                        <span class="create_at">${post.create_at}</span>
+                        <span class="create_at">${post.created_at}</span>
                         <p>${post.content}</p>
                     </div>`;
                 }
