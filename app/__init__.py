@@ -2,18 +2,25 @@ import os
 from shutil import register_unpack_format
 from flask import Flask, render_template, request
 from dotenv import load_dotenv
-from peewee import*
+from peewee import *
 import datetime
+import re
 from playhouse.shortcuts import model_to_dict
 
 load_dotenv()
 app = Flask(__name__)
 
-mydb=MySQLDatabase(os.getenv("MYSQL_DATABASE"),
+# Set TESTING=true in .env file
+if os.getenv("TESTING") == "true":
+    print("Running in test mode")
+    mydb = SqliteDatabase('file:memory?mode=memory&cache=shared', uri=True)
+else:
+    mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
                     user=os.getenv("MYSQL_USER"),
                     password=os.getenv("MYSQL_PASSWORD"),
 			        host=os.getenv("MYSQL_HOST"),
                     port=3306)
+
 print(mydb)
 
 class TimeLinePost(Model):
@@ -44,20 +51,27 @@ def portfolio():
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
     
-    name = request.form['name']
-    email = request.form['email']
-    content = request.form['content']
-    timeline_post = TimeLinePost.create(name=name, email=email,content=content)
+    name = request.form.get('name')
+    email = request.form.get('email')
+    email_re = re.compile(r"([-!#-'*+/-9=?A-Z^-~]+(\.[-!#-'*+/-9=?A-Z^-~]+)*|\"([]!#-[^-~ \t]|(\\[\t -~]))+\")@([-!#-'*+/-9=?A-Z^-~]+(\.[-!#-'*+/-9=?A-Z^-~]+)*|\[[\t -Z^-~]*])")
+    content = request.form.get('content')
 
-    return model_to_dict(timeline_post)
+    if not name or name == '' or name is None:
+        return "Invalid name", 400
+    elif not email or email == '' or email is None or not re.fullmatch(email_re, email):
+        return "Invalid email", 400
+    elif not content or content == '' or content is None:
+        return "Invalid content", 400
+    else:
+        timeline_post = TimeLinePost.create(name=name, email=email, content=content)
+        return model_to_dict(timeline_post)
 
 @app.route('/api/timeline_post', methods=['GET'])
 def get_time_line_post():
     return{
         'timeline_posts': [
             model_to_dict(p)
-            for p in
-TimeLinePost.select().order_by(TimeLinePost.created_at.desc())
+            for p in TimeLinePost.select().order_by(TimeLinePost.created_at.desc())
         ]
     }
 
