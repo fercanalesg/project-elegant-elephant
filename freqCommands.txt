@@ -1,0 +1,6 @@
+
+Start MYSQL Server = sudo /etc/init.d/mysql start
+
+Attach to a tmux session = tmux attach-session -t 0
+
+
