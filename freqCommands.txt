@@ -3,4 +3,8 @@ Start MYSQL Server = sudo /etc/init.d/mysql start
 
 Attach to a tmux session = tmux attach-session -t 0
 
+Stop Docker service = sudo service docker stop
+
+Start Docker service = sudo service docker start
+
 
